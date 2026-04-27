@@ -39,8 +39,8 @@ int _evaluateBoard(List<String?> board, int goatsCaptured) {
 double _minimax(List<String?> board, int goatsCaptured, int depth,
     bool isMaximizing, double alpha, double beta) {
   final winner = checkWinner(board, goatsCaptured);
-  if (winner == GameWinner.tiger) return 10000;
-  if (winner == GameWinner.goat) return -10000;
+  if (winner == GameWinner.tiger) return 100000;
+  if (winner == GameWinner.goat) return -100000;
   if (depth == 0) return _evaluateBoard(board, goatsCaptured).toDouble();
 
   if (isMaximizing) {
